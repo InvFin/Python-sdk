@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - main
+    - feature/*
+    - bugfix/*
+
+jobs:
+  test:
+    name: Test on python ${{ matrix.python-version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10"]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Update pip
+      run: python -m pip install --upgrade pip
+        
+    - name: Install dependencies
+      run: pip install -r requirements_dev.txt tox-gh-actions
+      
+    - name: Run flake8
+      run: flake8 invfinsdk tests
+    
+    - name: Run mypy
+      run: mypy invfinsdk tests
+    
+    - name: Run black
+      run: black invfinsdk tests
+      
+    - name: Run tests
+      run: make test
