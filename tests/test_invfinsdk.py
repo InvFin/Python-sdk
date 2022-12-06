@@ -12,6 +12,7 @@ class TestExchange:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-exchanges/",
             params={"api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
 
@@ -22,6 +23,7 @@ class TestIndustry:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-industrias/",
             params={"api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
 
@@ -32,6 +34,7 @@ class TestSector:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-sectores/",
             params={"api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
 
@@ -42,6 +45,7 @@ class TestCompany:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-empresas/",
             params={"api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("requests.get")
@@ -50,6 +54,7 @@ class TestCompany:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/empresa-basica/",
             params={"slug": "AAPL", "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("requests.get")
@@ -58,6 +63,7 @@ class TestCompany:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/empresa-completa/",
             params={"slug": "AAPL", "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("invfinsdk.api.Company.get_company_basic_information")
@@ -80,6 +86,7 @@ class TestCompany:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/estado-resultados/",
             params={"slug": "AAPL", "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("requests.get")
@@ -88,6 +95,7 @@ class TestCompany:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/balance-general/",
             params={"slug": "AAPL", "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("requests.get")
@@ -96,6 +104,7 @@ class TestCompany:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/estado-flujo-efectivo/",
             params={"slug": "AAPL", "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
 
@@ -106,6 +115,7 @@ class TestTerm:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-terminos/",
             params={"api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("requests.get")
@@ -114,6 +124,7 @@ class TestTerm:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/termino/",
             params={"id": 1, "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
 
@@ -124,6 +135,7 @@ class TestSuperInvestor:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-superinversores/",
             params={"api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("requests.get")
@@ -132,6 +144,7 @@ class TestSuperInvestor:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-historial/",
             params={"id": 1, "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
 
     @patch("requests.get")
@@ -140,4 +153,5 @@ class TestSuperInvestor:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/lista-movimientos/",
             params={"id": 1, "api_key": "key"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )

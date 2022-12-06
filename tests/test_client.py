@@ -30,4 +30,5 @@ class TestClient:
         mock_request.assert_called_once_with(
             url="https://inversionesyfinanzas.xyz/api/v1/path/",
             params={"api_key": "x"},
+            headers={"User-Agent": "invfinsdk-Python"},
         )
