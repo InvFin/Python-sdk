@@ -106,8 +106,8 @@ Before you submit a pull request, check that it meets these guidelines:
 To run a subset of tests::
 
 ```python
-    pytest tests.test_invfinsdk
-    ```
+pytest tests.test_invfinsdk
+```
 
 ## Deploying
 

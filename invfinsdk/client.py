@@ -30,9 +30,8 @@ class Client:
         params: Dict[str, Union[str, int]],
     ) -> requests.Response:
         url, params = self._build_request_params(url, params)
-        response = requests.get(url=url, params=params)
-        response.raise_for_status()
-        return response
+        headers = {"User-Agent": "invfinsdk-Python"}
+        return requests.get(url=url, params=params, headers=headers)
 
     def _get_clean_response(
         self,

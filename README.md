@@ -1,4 +1,7 @@
 # InvFinSDK
+[![Documentation Status](https://readthedocs.org/projects/invfinsdk/badge/?version=latest)](https://invfinsdk.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/dm/invfinsdk.svg)](https://pypi.python.org/pypi)
+[![PyPI](https://img.shields.io/pypi/v/invfinsdk.svg)](https://pypi.python.org/pypi)
 
 An SDK to interact with InvFin endpoints
 
@@ -22,6 +25,15 @@ An SDK to interact with InvFin endpoints
 The easiest way to install invfinsdk is using ``pip``:
 
     pip install -U invfinsdk
+
+
+## How to use it
+
+    from invfinsdk import Company
+
+    API_KEY = "******"
+
+    aapl = Company(API_KEY).get_company_basic_information({"ticker": "AAPL"})
 
 
 ## Source code
