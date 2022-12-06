@@ -1,7 +1,7 @@
 from typing import Any, Dict, Union
 
-from invfinsdk.client import Client
-from invfinsdk.constants import (
+from .client import Client
+from .constants import (
     ALL_COMPANIES,
     ALL_EXCHANGES,
     ALL_INDUSTRIES,

@@ -2,7 +2,7 @@ from typing import Any, Dict, Tuple, Union
 
 import requests
 
-from invfinsdk.constants import API_PATH, API_VERSION
+from .constants import API_PATH, API_VERSION
 
 
 class Client:
