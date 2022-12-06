@@ -116,6 +116,7 @@ check: ## check style
 	mypy ${APPS_FOLDERS}
 
 check-all: ## check style
+	make dist
 	twine check dist/*
 	flake8 ${APPS_FOLDERS}
 	isort --df -c ${APPS_FOLDERS}

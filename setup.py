@@ -2,7 +2,11 @@
 
 """The setup script."""
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
+
+with open("invfinsdk/__version__.py") as version_file:
+    version = version_file.read()
+    version = version[-7:-2]
 
 with open("README.md") as readme_file:
     readme = readme_file.read()
@@ -44,6 +48,6 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/InvFin/Python-sdk",
-    version="0.1.0",
+    version=version,
     zip_safe=False,
 )
