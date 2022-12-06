@@ -15,8 +15,8 @@ An SDK to interact with InvFin endpoints
 - [Company](https://inversionesyfinanzas.xyz/api/api-documentacion/#lista-de-terminos)
 - [Exchange](https://inversionesyfinanzas.xyz/api/api-documentacion/#lista-de-exchanges)
 - [Term](https://inversionesyfinanzas.xyz/api/api-documentacion/#lista-de-terminos)
-- [Industry](https://inversionesyfinanzas.xyz/api/api-documentacion/#lista-de-terminos)
-- [Sector](https://inversionesyfinanzas.xyz/api/api-documentacion/#lista-de-terminos)
+- [Industry](https://inversionesyfinanzas.xyz/api/api-documentacion/#lista-de-industrias)
+- [Sector](https://inversionesyfinanzas.xyz/api/api-documentacion/#lista-de-sectores)
 - [Superinvestor](https://inversionesyfinanzas.xyz/api/api-documentacion/#superinversores)
 
 

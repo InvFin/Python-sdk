@@ -73,7 +73,8 @@ docs: ## generate Sphinx HTML documentation, including API docs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
-release: dist ## package and upload a release
+release:
+	make check-all
 	twine upload dist/* --verbose
 
 test-release: dist ## package and upload a release
@@ -116,7 +117,7 @@ check: ## check style
 	mypy ${APPS_FOLDERS}
 
 check-all: ## check style
-	make dist
+	make test-release
 	twine check dist/*
 	flake8 ${APPS_FOLDERS}
 	isort --df -c ${APPS_FOLDERS}
