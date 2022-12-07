@@ -1,4 +1,3 @@
-from .__version__ import __version__
 from .api import Company, Exchange, Industry, Sector, SuperInvestor, Term
 
 __author__ = """Lucas Montes"""
